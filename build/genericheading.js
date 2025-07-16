@@ -168,9 +168,37 @@ function EditComponent(props) {
     })]
   });
 }
-function SaveComponent() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: "This is our heading block."
+function SaveComponent(props) {
+  function createTagName() {
+    switch (props.attributes.size) {
+      case "large":
+        return "h1";
+      case "medium":
+        /**
+         * Renders the saved content of the Generic Heading block in the frontend.
+         * 
+         * @param {Object} props - The block properties passed from the WordPress block API.
+         * @param {Object} props.attributes - The block attributes.
+         * @param {string} props.attributes.text - The heading text content.
+         * @param {string} props.attributes.size - The size of the heading (large, medium, or small).
+         * @return {JSX.Element} A div element containing "Hello" text.
+         */
+        function SaveComponent(props) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: "Hello"
+          });
+        }
+        return "h2";
+      case "small":
+        return "h3";
+      default:
+        return "h1";
+    }
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+    value: props.attributes.text,
+    tagName: createTagName(),
+    className: `headline headline--${props.attributes.size}`
   });
 }
 })();
