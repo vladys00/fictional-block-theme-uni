@@ -43,24 +43,12 @@ function SaveComponent(props) {
             case "large":
                 return "h1"
             case "medium":
-/**
- * Renders the saved content of the Generic Heading block in the frontend.
- * 
- * @param {Object} props - The block properties passed from the WordPress block API.
- * @param {Object} props.attributes - The block attributes.
- * @param {string} props.attributes.text - The heading text content.
- * @param {string} props.attributes.size - The size of the heading (large, medium, or small).
- * @return {JSX.Element} A div element containing "Hello" text.
- */
-function SaveComponent(props) {
-    return <div>Hello</div>
-}
                 return "h2"
             case "small":
                 return "h3"
             default:
                 return "h1"
-        }
-    }
+        }}
+
     return <RichText.Content value={props.attributes.text} tagName={createTagName()} className={`headline headline--${props.attributes.size}`} />
 }
