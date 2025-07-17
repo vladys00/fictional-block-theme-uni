@@ -91,3 +91,4 @@ class JSXBLock {
 
 new JSXBLock('banner');
 new JSXBLock('genericheading');
+new JSXBLock('genericbutton');
