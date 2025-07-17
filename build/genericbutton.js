@@ -277,7 +277,7 @@ function EditComponent(props) {
       value: props.attributes.text,
       onChange: handleTextChange,
       tagName: "a",
-      className: `btn btn--${props.attributes.size} btn--blue`
+      className: `btn btn--${props.attributes.size} btn--${props.attributes.colorName}`
     }), isLinkPickerVisible && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Popover, {
       position: "middle center",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.__experimentalLinkControl, {
@@ -299,7 +299,7 @@ function EditComponent(props) {
 function SaveComponent(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("a", {
     href: props.attributes.linkObject.url,
-    className: `btn btn--${props.attributes.size} btn--blue`,
+    className: `btn btn--${props.attributes.size} btn--${props.attributes.colorName}`,
     children: props.attributes.text
   });
 }

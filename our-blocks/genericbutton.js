@@ -74,7 +74,7 @@ function EditComponent(props) {
             value={props.attributes.text}
             onChange={handleTextChange}
             tagName="a"
-            className={`btn btn--${props.attributes.size} btn--blue`}
+            className={`btn btn--${props.attributes.size} btn--${props.attributes.colorName}`}
             />
             {isLinkPickerVisible &&(
                 <Popover position="middle center">
@@ -92,6 +92,6 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
     return (
-        <a href={props.attributes.linkObject.url} className={`btn btn--${props.attributes.size} btn--blue`}>{props.attributes.text}</a>
+        <a href={props.attributes.linkObject.url} className={`btn btn--${props.attributes.size} btn--${props.attributes.colorName}`}>{props.attributes.text}</a>
     )
 }
