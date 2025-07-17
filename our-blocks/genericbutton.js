@@ -2,6 +2,7 @@ import { RichText,InspectorControls, BlockControls, __experimentalLinkControl as
 import { ToolbarButton, ToolbarGroup, Popover, Button, PanelBody, PanelRow, ColorPalette } from "@wordpress/components"
 import { link } from "@wordpress/icons"
 import { useState } from "@wordpress/element"
+import ourColors from "../inc/ourColors.js"
  
 wp.blocks.registerBlockType('ourblocktheme/genericbutton', {
     title: "Generic Button",
@@ -17,17 +18,7 @@ wp.blocks.registerBlockType('ourblocktheme/genericbutton', {
 
 function EditComponent(props) {
     const [isLinkPickerVisible, setIsLinkPickerVisible] = useState(false);
-    
-    const ourColors = [
-        {name: "blue", color: "#0d3b66"},
-        {name: "orange", color: "#ee964b"},
-        {name: "dark-orange", color: "#f95738"},
 
-    ]
-
-    
-
-    
     function handleTextChange(x){
         props.setAttributes({text: x})
     }
@@ -65,7 +56,7 @@ function EditComponent(props) {
             <InspectorControls>
                 <PanelBody title="Color" initialOpen={true}>
                     <PanelRow>
-                        <ColorPalette colors={ourColors} value={currentColorValue} onChange={handleColorChange}/>
+                        <ColorPalette disableCustomColors={true} clearable={false} colors={ourColors} value={currentColorValue} onChange={handleColorChange}/>
                     </PanelRow>
                 </PanelBody>
             </InspectorControls>
