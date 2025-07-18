@@ -9,12 +9,7 @@ wp.blocks.registerBlockType('ourblocktheme/banner', {
     },
     attributes:{
         align:{type: "string", default: "full"   },
-        imgID: {type: "number" },
-        imgURL: {type: "string" },
-        extraAttribute1: {type: "string", default: "Extra Attribute 1"},
-        extraAttribute2: {type: "string", default: "Extra Attribute 2"},
-        extraAttribute3: {type: "string", default: "Extra Attribute 3"},
-    },
+        imgID: {type: "number" }, imgURL: {type: "string" , default: window.banner.fallbackimage } },
     edit: EditComponent,
     save: SaveComponent
 })
@@ -23,7 +18,8 @@ function EditComponent(props) {
     console.log("This are the props-->",props);
 
     useEffect(function () {
-        async function go(){
+        if (props.attributes.imgID) {
+            async function go(){
             const response = await apiFetch({
                 path:`/wp/v2/media/${props.attributes.imgID}`,
                 method: "GET"
@@ -31,6 +27,7 @@ function EditComponent(props) {
             props.setAttributes({imgURL: response.media_details.sizes.pageBanner.source_url})
         }
         go()
+        }
     }, [props.attributes.imgID])
 
     function onFileSelect(x) {
