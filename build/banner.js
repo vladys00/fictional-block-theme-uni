@@ -157,12 +157,25 @@ wp.blocks.registerBlockType('ourblocktheme/banner', {
     },
     imgURL: {
       type: "string"
+    },
+    extraAttribute1: {
+      type: "string",
+      default: "Extra Attribute 1"
+    },
+    extraAttribute2: {
+      type: "string",
+      default: "Extra Attribute 2"
+    },
+    extraAttribute3: {
+      type: "string",
+      default: "Extra Attribute 3"
     }
   },
   edit: EditComponent,
   save: SaveComponent
 });
 function EditComponent(props) {
+  console.log("This are the props-->", props);
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {
     async function go() {
       const response = await _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
