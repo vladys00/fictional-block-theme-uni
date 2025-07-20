@@ -2,8 +2,8 @@ import apiFetch from "@wordpress/api-fetch";
 import { Button, PanelBody, PanelRow} from '@wordpress/components';
 import { InnerBlocks, InspectorControls, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 import { useEffect } from "@wordpress/element";
-wp.blocks.registerBlockType('ourblocktheme/banner', {
-    title: "Banner",
+wp.blocks.registerBlockType('ourblocktheme/slide', {
+    title: "Slide",
     supports: {
         align: ["full"]
     },
