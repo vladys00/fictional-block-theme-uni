@@ -135,3 +135,4 @@ class JSXBLock {
 new JSXBLock('banner', true, ['fallbackimage' => get_theme_file_uri('/images/library-hero.jpg')]);
 new JSXBLock('genericheading');
 new JSXBLock('genericbutton');
+new JSXBLock('slideshow', true);
