@@ -38,7 +38,8 @@ function EditComponent(props) {
     }
 
     const currentColorValue = ourColors.filter(color => {
-        return color.name == props.attributes.colorName})[0].color;
+        return color.name == props.attributes.colorName})
+        [0].color;
  
 
     return (
