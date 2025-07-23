@@ -75,3 +75,11 @@ function myAllowedBlocks($allowed_block_types, $editor_context){
 }
 
 add_filter('allowed_block_types_all','myAllowedBlocks',10,2);
+
+//REGISTER OUR NEW BLOCKS
+
+function our_new_blocks(){
+    register_block_type_from_metadata(__DIR__.'/build/footer');
+}
+
+add_action('init', 'our_new_blocks');

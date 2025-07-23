@@ -33,7 +33,7 @@ class PlaceholderBlock {
 
 new PlaceholderBlock('eventsandblogs');
 new PlaceholderBlock('header');
-new PlaceholderBlock('footer');
+//new PlaceholderBlock('footer');
 new PlaceholderBlock('singlepost');
 new PlaceholderBlock('page');
 new PlaceholderBlock('blogindex');
@@ -44,6 +44,12 @@ new PlaceholderBlock('archiveevent');
 new PlaceholderBlock('singleevent');
 new PlaceholderBlock('archivecampus');
 new PlaceholderBlock('singlecampus');
+new PlaceholderBlock('archive');
+new PlaceholderBlock('pastevents');
+new PlaceholderBlock('mynotes');
+new PlaceholderBlock('search');
+new PlaceholderBlock('searchresults');
+
 
 
 class JSXBLock {
