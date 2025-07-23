@@ -99,6 +99,10 @@ new PlaceholderBlock('eventsandblogs');
 new PlaceholderBlock('header');
 new PlaceholderBlock('footer');
 new PlaceholderBlock('singlepost');
+new PlaceholderBlock('page');
+new PlaceholderBlock('blogindex');
+new PlaceholderBlock('programarchive');
+new PlaceholderBlock('singleprogram');
 
 class JSXBLock {
     function __construct($name, $renderCallback = null, $data = null) {
