@@ -104,6 +104,11 @@ new PlaceholderBlock('blogindex');
 new PlaceholderBlock('programarchive');
 new PlaceholderBlock('singleprogram');
 new PlaceholderBlock('singleprofessor');
+new PlaceholderBlock('archiveevent');
+new PlaceholderBlock('singleevent');
+new PlaceholderBlock('archivecampus');
+new PlaceholderBlock('singlecampus');
+
 
 class JSXBLock {
     function __construct($name, $renderCallback = null, $data = null) {
