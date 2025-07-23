@@ -9,7 +9,8 @@ wp.blocks.registerBlockType('ourblocktheme/slide', {
     },
     attributes:{
         align:{type: "string", default: "full"   },
-        imgID: {type: "number" }, imgURL: {type: "string" , default: window.banner.fallbackimage } },
+        imgID: {type: "number" },
+        imgURL: {type: "string" , default: window.banner.fallbackimage } },
     edit: EditComponent,
     save: SaveComponent
 })
@@ -24,6 +25,7 @@ function EditComponent(props) {
                 path:`/wp/v2/media/${props.attributes.imgID}`,
                 method: "GET"
             })
+            console.log("This is the response URL-->",response);
             props.setAttributes({imgURL: response.media_details.sizes.pageBanner.source_url})
         }
         go()

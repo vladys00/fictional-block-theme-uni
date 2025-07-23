@@ -4,7 +4,7 @@
     }
  ?>
 
-        <div class="hero-slider__slide" style="background-image: url('<?php echo $attributes['imgURL'] ?>)">
+        <div class="hero-slider__slide" style="background-image: url('<?php echo $attributes['imgURL']; ?>')">
             <div class="hero-slider__interior container">
                 <div class="hero-slider__overlay t-center">
                     <?php echo $content; ?>

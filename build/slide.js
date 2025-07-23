@@ -172,6 +172,7 @@ function EditComponent(props) {
           path: `/wp/v2/media/${props.attributes.imgID}`,
           method: "GET"
         });
+        console.log("This is the response URL-->", response);
         props.setAttributes({
           imgURL: response.media_details.sizes.pageBanner.source_url
         });
