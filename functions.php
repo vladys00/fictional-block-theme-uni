@@ -71,7 +71,7 @@ function myAllowedBlocks($allowed_block_types, $editor_context){
         return $allowed_block_types;
     } 
     // if you are on the full site editor screen
-    return array('ourblocktheme/header', 'ourblocktheme/footer', 'ourblocktheme/singlepost', 'ourblocktheme/page', 'ourblocktheme/blogindex', 'ourblocktheme/programarchive', 'ourblocktheme/singleprogram');
+    
 }
 
 add_filter('allowed_block_types_all','myAllowedBlocks',10,2);
@@ -80,6 +80,7 @@ add_filter('allowed_block_types_all','myAllowedBlocks',10,2);
 
 function our_new_blocks(){
     register_block_type_from_metadata(__DIR__.'/build/footer');
+    register_block_type_from_metadata(__DIR__.'/build/header');
 }
 
 add_action('init', 'our_new_blocks');
